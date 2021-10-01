@@ -8,9 +8,6 @@ const { auth } = require('./Middleware/auth');
 dotenv.config({ path: './config.env' });
 const port = process.env.PORT || 5000;
 
-app.get('/',(req,res)=>{
-  res.send('You are online')
-})
 //convert json form
 app.use(express.json({ limit: '30mb', extended: true }));
 app.use(express.urlencoded({ limit: '30mb', extended: true }));
