@@ -7,7 +7,8 @@
     "node":"14.15.4"
   },
   "scripts": {
-    "start": "node server/server.js",
+    "start": "nodemon --exec babel-node server.js",
+    "start1": "node server/server.js",
     "server": "nodemon server/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client \""
