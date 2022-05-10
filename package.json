@@ -1,0 +1,37 @@
+{
+  "name": "dtvs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "14.15.4"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client \"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base64mime": "^0.0.3",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^6.2.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.9",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.6.5",
+    "pusher": "^5.0.0",
+    "xlsx": "^0.17.4"
+  }
+}
