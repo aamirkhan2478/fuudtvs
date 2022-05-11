@@ -2,7 +2,7 @@ import axios from 'axios';
 import { logoutUser } from '../Redux/Actions/authAction';
 import store from '../Redux/store';
 
-const baseURL = 'http://localhost:4000';
+const baseURL = 'https://dtvsforfuuast.herokuapp.com/';
 
 const axiosInstance = axios.create({
   baseURL,
