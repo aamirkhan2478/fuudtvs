@@ -609,8 +609,8 @@ exports.applyApplication = async (req, res) => {
         address,
         phoneNo,
         session,
-        date: moment().format("L LT"),
-        updatedDate: moment().format("L LT"),
+        date: moment().format("L h hh"),
+        updatedDate: moment().format("L h hh"),
         documents,
         image,
       });
@@ -682,7 +682,7 @@ exports.Status = async (req, res) => {
   try {
     const status = await Application.findOne({
       misid: req.user.userid,
-    }).select("description status date");
+    }).select("description status updatedDate");
     return res.send(status);
   } catch (e) {
     console.error(e.message);
