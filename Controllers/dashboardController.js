@@ -519,7 +519,7 @@ exports.updateStatus = async (req, res) => {
     } else {
       data.description = description;
       data.status = status;
-      data.date = moment().format("L LT");
+      data.updatedDate = moment().format("L LT");
       await data.save();
       return res.status(200).json({ msg: "Status Changed Successfully" });
     }
@@ -610,9 +610,9 @@ exports.applyApplication = async (req, res) => {
         phoneNo,
         session,
         date: moment().format("L LT"),
+        updatedDate: moment().format("L LT"),
         documents,
         image,
-        // image: req.file.originalname,
       });
       await applyapplication.save();
       return res.status(201).json({ msg: "Apply Application Successfully" });

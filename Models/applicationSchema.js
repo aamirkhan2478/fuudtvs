@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const applicationSchema = mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'user',
+    ref: "user",
   },
   misid: {
     type: String,
@@ -53,36 +53,39 @@ const applicationSchema = mongoose.Schema({
     type: String,
     required: true,
     default:
-      'Your application is sent to Admin please check it later for more updates',
+      "Your application is sent to Admin please check it later for more updates",
   },
   status: {
     type: String,
     required: true,
-    default: 'Admin',
+    default: "Admin",
   },
   feeChalan: {
     type: String,
-    default: '',
+    default: "",
   },
   date: {
     type: String,
   },
-  session:{
-    type:String,
-    required:true
+  updatedDate: {
+    type: String,
   },
-  documents:{
-    type:String,
-    required:true
+  session: {
+    type: String,
+    required: true,
   },
-  image:{
-    type:String,
-    required:true
+  documents: {
+    type: String,
+    required: true,
   },
-  paidChalan:{
-    type:String,
-    default:''
-  }
+  image: {
+    type: String,
+    required: true,
+  },
+  paidChalan: {
+    type: String,
+    default: "",
+  },
 });
 
-module.exports = Application = mongoose.model('application', applicationSchema);
+module.exports = Application = mongoose.model("application", applicationSchema);
