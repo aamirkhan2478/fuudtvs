@@ -519,7 +519,7 @@ exports.updateStatus = async (req, res) => {
     } else {
       data.description = description;
       data.status = status;
-      data.updatedDate = moment().format("L LT");
+      data.updatedDate = moment().format("L");
       await data.save();
       return res.status(200).json({ msg: "Status Changed Successfully" });
     }
@@ -609,8 +609,8 @@ exports.applyApplication = async (req, res) => {
         address,
         phoneNo,
         session,
-        date: moment().format("L h hh"),
-        updatedDate: moment().format("L h hh"),
+        date: moment().format("L"),
+        updatedDate: moment().format("L"),
         documents,
         image,
       });
