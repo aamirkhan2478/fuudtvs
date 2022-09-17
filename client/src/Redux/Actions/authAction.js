@@ -55,7 +55,6 @@ export const loginUser = (values, setNotify, navigate) => async (dispatch) => {
       payload: data,
     });
     navigate("/app/dashboard");
-    // window.location.href = '/app/dashboard';
   } catch (err) {
     dispatch({
       type: LOGIN_ERROR,
@@ -65,7 +64,7 @@ export const loginUser = (values, setNotify, navigate) => async (dispatch) => {
       message: err.response.data.error,
       type: "error",
     });
-  }
+  } 
 };
 
 export const forgetPassword =
